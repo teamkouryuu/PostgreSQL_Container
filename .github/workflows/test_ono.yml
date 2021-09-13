@@ -1,11 +1,11 @@
-name: test_ono
+name: test-ono
 on: [push]
 jobs:
-  echo-teamkoryuu-name:
-    runs-on:ubuntu-latest
+  echo-teamkyoyuu-name:
+    runs-on: ubuntu-latest
     steps:
-      - run : echo "ono"
-      - run : echo "nigoh"
-      - run : echo "iwaya"
-      - run : echo "hosoda"
-      - run : echo "tureta"
+      - run: echo ono
+      - run: echo nigoh
+      - run: echo iwaya
+      - run: echo hosoda
+      - run: echo tureta
