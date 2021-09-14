@@ -1,0 +1,27 @@
+name: PostgreSQL service example
+on: push
+
+jobs:
+  # コンテナジョブのラベル
+  container-job:
+    # コンテナは Linux ベースのオペレーティングシステムで実行しなければならない
+    runs-on: ubuntu-latest
+    # `container-job` が実行される Docker Hub イメージ
+    container: node:10.18-jessie
+
+    # `container-job` で実行するサービスコンテナ
+    services:
+      # サービスコンテナへのアクセスに使用されるラベル
+      postgres:
+        # Docker Hub のイメージ
+        image: postgres
+        # postgres のパスワードを入力する
+        env:
+          POSTGRES_PASSWORD: postgres
+        # postgres が起動するまで待機するようにヘルスチェックを設定する
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+          
