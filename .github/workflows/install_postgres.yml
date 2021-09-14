@@ -4,7 +4,7 @@ on: push
 jobs:
   # コンテナジョブのラベル
   container-job:
-    # コンテナは Linux ベースのオペレーティングシステムで実行しなければならない
+    # コンテナは Linux ベースのオペレーティングシステムで実行しなければならない。
     runs-on: ubuntu-latest
     # `container-job` が実行される Docker Hub イメージ
     container: node:10.18-jessie
