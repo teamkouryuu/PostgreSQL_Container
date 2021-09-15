@@ -33,7 +33,7 @@ jobs:
       # `package.json` ファイル内のすべての依存関係のクリーンインストールを実行する
       # 詳しい情報については https://docs.npmjs.com/cli/ci.html を参照
       - name: Install dependencies
-        run: npm i
+        run: npm i --save pg
 
       - name: Connect to PostgreSQL
         # PostgreSQLテーブルを作成し、テーブルにデータを入力してから
