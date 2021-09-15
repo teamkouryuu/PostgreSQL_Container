@@ -24,7 +24,7 @@ pgclient.query(text, values, (err, res) => {
     if (err) throw err
 });
 
-pgclient.query('SELECT * FROM student', (err, res) => {
+pgclient.query('SELECT firstname FROM student', (err, res) => {
     if (err) throw err
     console.log(err, res.rows) // Print the data in student table
     pgclient.end()
